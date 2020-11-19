@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Klima</string>
+    <string name="todo">TODO</string>
+    <string name="extreme_hot">Ok, the scorching trials have begun</string>
+    <string name="moderate">Seems perfect right now!</string>
+    <string name="cool">I\'m shivering okay!!</string>
+    <string name="frozen">Itzz Chilling here</string>
+    <string name="status_update">I\'m updating!!</string>
+    <string name="open_weather_maps_app_id">e0d0e8c9226877f11521148d89c2373e</string>
+</resources>
