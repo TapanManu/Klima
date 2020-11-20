@@ -7,4 +7,5 @@
     <string name="frozen">Itzz Chilling here</string>
     <string name="status_update">I\'m updating!!</string>
     <string name="open_weather_maps_app_id">e0d0e8c9226877f11521148d89c2373e</string>
+    <string name="temperature">temp</string>
 </resources>

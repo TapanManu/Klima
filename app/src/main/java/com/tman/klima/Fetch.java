@@ -12,21 +12,23 @@ import android.util.Log;
 
 public class Fetch {
     private static final String OPEN_WEATHER_MAP_API =
-            "http://api.openweathermap.org/data/2.5/weather?q=%s&units=metric";
+            "https://api.openweathermap.org/data/2.5/weather?q=%s&APPID=2bf6f5a1e70425ac39984485bbd585bb";
 
     public static JSONObject getJSON(Context context, String city){
         try {
+
             URL url = new URL(String.format(OPEN_WEATHER_MAP_API, city));
+            Log.d("success1","hi");
             HttpURLConnection connection =
                     (HttpURLConnection)url.openConnection();
-
+            Log.d("success2","hi");
             connection.addRequestProperty("x-api-key",
-                    context.getString(R.string.open_weather_maps_app_id));
-
+                    "2bf6f5a1e70425ac39984485bbd585bb");
+            Log.d("success3",String.valueOf(connection));
             BufferedReader reader = new BufferedReader(
                     new InputStreamReader(connection.getInputStream()));
-
-            StringBuffer json = new StringBuffer(1024);
+            Log.d("success4","hi");
+            StringBuilder json = new StringBuilder(1024);
             String tmp;
             while((tmp=reader.readLine())!=null)
                 json.append(tmp).append("\n");
@@ -42,6 +44,7 @@ public class Fetch {
 
             return data;
         }catch(Exception e){
+            Log.d("data:","hi");
             return null;
         }
     }
